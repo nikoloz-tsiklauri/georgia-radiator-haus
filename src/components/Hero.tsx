@@ -8,17 +8,21 @@ const Hero = () => {
   const { t } = useLanguage();
 
   return (
-    <section id="hero" className="relative min-h-screen flex items-center pt-20">
-      {/* Background Image */}
+    <section id="hero" className="relative min-h-screen flex items-center pt-20 hero-gradient">
+      {/* Background Image with Light Overlay */}
       <div className="absolute inset-0 z-0">
         <img
           src={heroImage}
           alt="Racing Radiator"
-          className="w-full h-full object-cover opacity-40"
+          className="w-full h-full object-cover opacity-20"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/80 to-transparent" />
-        <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background/50" />
+        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/90 to-background/70" />
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-background" />
       </div>
+
+      {/* Decorative Elements */}
+      <div className="absolute top-40 right-20 w-72 h-72 bg-primary/5 rounded-full blur-3xl" />
+      <div className="absolute bottom-40 left-20 w-96 h-96 bg-primary/10 rounded-full blur-3xl" />
 
       {/* Content */}
       <div className="container mx-auto px-4 relative z-10">
@@ -29,18 +33,18 @@ const Hero = () => {
             transition={{ duration: 0.8 }}
           >
             {/* Badge */}
-            <div className="inline-flex items-center gap-2 bg-primary/10 border border-primary/30 rounded-full px-4 py-2 mb-6">
+            <div className="inline-flex items-center gap-2 bg-card border border-border rounded-full px-5 py-2.5 mb-6 shadow-soft">
               <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-              <span className="text-sm text-primary font-medium">German Engineering</span>
+              <span className="text-sm text-foreground font-medium">German Engineering</span>
             </div>
 
             {/* Title */}
-            <h1 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6">
+            <h1 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6 text-foreground">
               {t('hero.title')}
             </h1>
 
             {/* Subtitle */}
-            <p className="text-lg md:text-xl text-muted-foreground max-w-xl mb-8 font-body">
+            <p className="text-lg md:text-xl text-muted-foreground max-w-xl mb-8 font-body leading-relaxed">
               {t('hero.subtitle')}
             </p>
 
@@ -48,7 +52,7 @@ const Hero = () => {
             <div className="flex flex-col sm:flex-row gap-4">
               <Button
                 size="lg"
-                className="racing-gradient racing-glow font-display text-lg tracking-wide h-14 px-8"
+                className="racing-gradient racing-glow font-display text-lg tracking-wide h-14 px-8 hover:opacity-90 transition-opacity"
                 asChild
               >
                 <a href="#contact">
@@ -60,7 +64,7 @@ const Hero = () => {
               <Button
                 size="lg"
                 variant="outline"
-                className="border-border hover:border-primary hover:text-primary font-display text-lg tracking-wide h-14 px-8"
+                className="border-2 border-border hover:border-primary hover:bg-primary/5 hover:text-primary font-display text-lg tracking-wide h-14 px-8 transition-all duration-200"
                 asChild
               >
                 <a href="tel:+995555123456">
@@ -71,8 +75,8 @@ const Hero = () => {
             </div>
 
             {/* Phone Display */}
-            <div className="mt-10 flex items-center gap-4">
-              <div className="w-12 h-px bg-primary/50" />
+            <div className="mt-12 flex items-center gap-4">
+              <div className="w-16 h-px bg-gradient-to-r from-primary to-transparent" />
               <a href="tel:+995555123456" className="text-2xl font-display text-foreground hover:text-primary transition-colors">
                 +995 555 123 456
               </a>
