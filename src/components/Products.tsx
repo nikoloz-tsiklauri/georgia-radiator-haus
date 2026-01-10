@@ -30,7 +30,7 @@ const Products = () => {
   ];
 
   return (
-    <section id="products" className="py-20 md:py-32 bg-card">
+    <section id="products" className="py-20 md:py-32 subtle-gradient">
       <div className="container mx-auto px-4">
         {/* Header */}
         <motion.div
@@ -39,10 +39,10 @@ const Products = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
+          <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-foreground">
             {t('products.title')}
           </h2>
-          <div className="w-20 h-1 bg-primary mx-auto" />
+          <div className="w-20 h-1 bg-gradient-to-r from-primary to-primary/50 mx-auto rounded-full" />
         </motion.div>
 
         {/* Products Grid */}
@@ -54,31 +54,31 @@ const Products = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.15, duration: 0.5 }}
-              className="group bg-secondary/30 border border-border rounded-xl overflow-hidden hover:border-primary/50 transition-all duration-300"
+              className="group bg-card border border-border rounded-2xl overflow-hidden hover:border-primary/30 hover:shadow-elevated transition-all duration-300"
             >
               {/* Image */}
-              <div className="relative aspect-square overflow-hidden">
+              <div className="relative aspect-square overflow-hidden bg-secondary">
                 <img
                   src={product.image}
                   alt={product.name}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-60" />
+                <div className="absolute inset-0 bg-gradient-to-t from-card via-transparent to-transparent opacity-40" />
                 
                 {/* Performance Badge */}
-                <div className="absolute top-4 right-4 bg-primary/90 text-primary-foreground px-3 py-1 rounded-full flex items-center gap-1">
-                  <Zap className="h-3 w-3" />
+                <div className="absolute top-4 right-4 bg-primary text-primary-foreground px-4 py-1.5 rounded-full flex items-center gap-1.5 shadow-racing">
+                  <Zap className="h-3.5 w-3.5" />
                   <span className="text-xs font-display">{t('products.performance')}</span>
                 </div>
               </div>
 
               {/* Content */}
               <div className="p-6">
-                <h3 className="font-display text-xl font-bold mb-2">{product.name}</h3>
+                <h3 className="font-display text-xl font-bold mb-2 text-foreground">{product.name}</h3>
                 <p className="text-muted-foreground text-sm mb-4">{product.description}</p>
                 
                 <div className="flex items-center gap-2 text-sm">
-                  <span className="text-primary">{t('products.compatible')}:</span>
+                  <span className="text-primary font-medium">{t('products.compatible')}:</span>
                   <span className="text-muted-foreground">{product.compatible}</span>
                 </div>
               </div>

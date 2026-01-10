@@ -22,7 +22,7 @@ const Features = () => {
   ];
 
   return (
-    <section className="py-20 md:py-32 bg-background">
+    <section className="py-20 md:py-32 bg-card">
       <div className="container mx-auto px-4">
         {/* Header */}
         <motion.div
@@ -31,10 +31,10 @@ const Features = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
+          <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-foreground">
             {t('features.title')}
           </h2>
-          <div className="w-20 h-1 bg-primary mx-auto" />
+          <div className="w-20 h-1 bg-gradient-to-r from-primary to-primary/50 mx-auto rounded-full" />
         </motion.div>
 
         {/* Features Grid */}
@@ -46,19 +46,19 @@ const Features = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1, duration: 0.5 }}
-              className="group relative p-8 bg-card border border-border rounded-xl hover:border-primary/50 transition-all duration-300"
+              className="group relative p-8 bg-background border border-border rounded-2xl hover:border-primary/30 hover:shadow-elevated transition-all duration-300"
             >
-              {/* Hover Glow */}
-              <div className="absolute inset-0 rounded-xl bg-primary/5 opacity-0 group-hover:opacity-100 transition-opacity" />
+              {/* Hover Gradient */}
+              <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               
               <div className="relative">
                 {/* Icon */}
-                <div className="w-14 h-14 rounded-lg bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors">
+                <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-primary/15 to-primary/5 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                   <feature.icon className="h-7 w-7 text-primary" />
                 </div>
 
                 {/* Content */}
-                <h3 className="font-display text-lg font-semibold mb-3">
+                <h3 className="font-display text-lg font-semibold mb-3 text-foreground">
                   {t(feature.titleKey)}
                 </h3>
                 <p className="text-muted-foreground text-sm leading-relaxed">
@@ -67,9 +67,7 @@ const Features = () => {
               </div>
 
               {/* Corner Accent */}
-              <div className="absolute top-0 right-0 w-16 h-16 overflow-hidden rounded-tr-xl">
-                <div className="absolute top-0 right-0 w-24 h-0.5 bg-gradient-to-l from-primary/50 to-transparent transform rotate-45 translate-x-4 translate-y-4" />
-              </div>
+              <div className="absolute top-4 right-4 w-2 h-2 rounded-full bg-primary/30 group-hover:bg-primary transition-colors duration-300" />
             </motion.div>
           ))}
         </div>

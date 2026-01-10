@@ -12,7 +12,7 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="py-20 md:py-32 bg-card">
+    <section id="about" className="py-20 md:py-32 subtle-gradient">
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           {/* Content */}
@@ -22,7 +22,7 @@ const About = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
+            <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-foreground">
               {t('about.title')}
             </h2>
             <p className="text-lg text-muted-foreground leading-relaxed mb-8">
@@ -38,12 +38,12 @@ const About = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1, duration: 0.5 }}
-                  className="flex flex-col items-center text-center p-6 bg-secondary/50 border border-border rounded-lg"
+                  className="flex flex-col items-center text-center p-6 bg-card border border-border rounded-xl shadow-card hover:shadow-elevated hover:border-primary/30 transition-all duration-300"
                 >
-                  <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mb-4">
+                  <div className="w-14 h-14 rounded-full bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center mb-4">
                     <badge.icon className="h-7 w-7 text-primary" />
                   </div>
-                  <span className="font-display text-sm tracking-wide">{t(badge.key)}</span>
+                  <span className="font-display text-sm tracking-wide text-foreground">{t(badge.key)}</span>
                 </motion.div>
               ))}
             </div>
@@ -57,10 +57,10 @@ const About = () => {
             transition={{ duration: 0.6 }}
             className="relative"
           >
-            <div className="aspect-square bg-gradient-to-br from-secondary to-muted rounded-2xl p-8 relative overflow-hidden">
+            <div className="aspect-square bg-gradient-to-br from-card to-secondary rounded-3xl p-8 relative overflow-hidden shadow-elevated border border-border">
               {/* Decorative Elements */}
-              <div className="absolute top-0 right-0 w-32 h-32 bg-primary/10 rounded-full -translate-y-1/2 translate-x-1/2" />
-              <div className="absolute bottom-0 left-0 w-48 h-48 bg-primary/5 rounded-full translate-y-1/4 -translate-x-1/4" />
+              <div className="absolute top-0 right-0 w-40 h-40 bg-primary/10 rounded-full -translate-y-1/2 translate-x-1/2 blur-2xl" />
+              <div className="absolute bottom-0 left-0 w-56 h-56 bg-primary/5 rounded-full translate-y-1/4 -translate-x-1/4 blur-2xl" />
               
               <div className="relative h-full flex items-center justify-center">
                 <div className="text-center">
@@ -80,10 +80,10 @@ const About = () => {
               whileInView={{ scale: 1 }}
               viewport={{ once: true }}
               transition={{ delay: 0.3, type: 'spring' }}
-              className="absolute -bottom-6 -left-6 bg-primary text-primary-foreground p-4 rounded-xl shadow-lg"
+              className="absolute -bottom-6 -left-6 bg-primary text-primary-foreground p-5 rounded-2xl shadow-racing"
             >
               <div className="font-display text-3xl font-bold">10+</div>
-              <div className="text-xs opacity-80">Years Experience</div>
+              <div className="text-xs opacity-90">Years Experience</div>
             </motion.div>
           </motion.div>
         </div>
