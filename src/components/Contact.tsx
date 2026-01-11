@@ -59,7 +59,7 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="py-20 md:py-32 bg-card">
+    <section id="contact" className="py-20 md:py-32 bg-background">
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20">
           {/* Form */}
@@ -82,7 +82,7 @@ const Contact = () => {
                     name="user_name"
                     required
                     placeholder={t('contact.name')}
-                    className="bg-background border-border focus:border-primary h-12 rounded-xl shadow-soft"
+                    className="bg-accent/50 border-border focus:border-primary h-12 rounded-xl shadow-soft"
                   />
                 </div>
                 <div>
@@ -91,7 +91,7 @@ const Contact = () => {
                     name="user_phone"
                     required
                     placeholder={t('contact.phone')}
-                    className="bg-background border-border focus:border-primary h-12 rounded-xl shadow-soft"
+                    className="bg-accent/50 border-border focus:border-primary h-12 rounded-xl shadow-soft"
                   />
                 </div>
               </div>
@@ -103,7 +103,7 @@ const Contact = () => {
                     name="user_car"
                     required
                     placeholder="BMW E36, Mercedes W204..."
-                    className="bg-background border-border focus:border-primary h-12 rounded-xl shadow-soft"
+                    className="bg-accent/50 border-border focus:border-primary h-12 rounded-xl shadow-soft"
                   />
                 </div>
                 <div>
@@ -111,7 +111,7 @@ const Contact = () => {
                   <Input
                     name="user_engine"
                     placeholder="2.0L Turbo, 3.0L V6..."
-                    className="bg-background border-border focus:border-primary h-12 rounded-xl shadow-soft"
+                    className="bg-accent/50 border-border focus:border-primary h-12 rounded-xl shadow-soft"
                   />
                 </div>
               </div>
@@ -122,7 +122,7 @@ const Contact = () => {
                   name="message"
                   rows={4}
                   placeholder={t('contact.message')}
-                  className="bg-background border-border focus:border-primary resize-none rounded-xl shadow-soft"
+                  className="bg-accent/50 border-border focus:border-primary resize-none rounded-xl shadow-soft"
                 />
               </div>
 
@@ -158,7 +158,7 @@ const Contact = () => {
             transition={{ duration: 0.6 }}
             className="lg:pl-8"
           >
-            <div className="bg-background border border-border rounded-3xl p-8 md:p-10 h-full shadow-elevated">
+            <div className="premium-surface rounded-3xl p-8 md:p-10 h-full shadow-elevated">
               <h3 className="font-display text-2xl font-bold mb-8 text-foreground">RACING GEORGIA</h3>
               
               <div className="space-y-6 mb-10">
@@ -170,7 +170,7 @@ const Contact = () => {
                     rel={item.href.startsWith('http') ? 'noopener noreferrer' : undefined}
                     className="flex items-start gap-4 group"
                   >
-                    <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary/15 to-primary/5 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                    <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary/20 to-primary/8 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
                       <item.icon className="h-5 w-5 text-primary" />
                     </div>
                     <div className="pt-3">

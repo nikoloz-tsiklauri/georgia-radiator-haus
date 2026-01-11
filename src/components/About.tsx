@@ -12,7 +12,7 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="py-20 md:py-32 subtle-gradient">
+    <section id="about" className="py-20 md:py-32 section-gradient">
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           {/* Content */}
@@ -38,9 +38,9 @@ const About = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1, duration: 0.5 }}
-                  className="flex flex-col items-center text-center p-6 bg-card border border-border rounded-xl shadow-card hover:shadow-elevated hover:border-primary/30 transition-all duration-300"
+                  className="flex flex-col items-center text-center p-6 floating-card rounded-xl hover:shadow-elevated hover:border-primary/40 transition-all duration-300"
                 >
-                  <div className="w-14 h-14 rounded-full bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center mb-4">
+                  <div className="w-14 h-14 rounded-full bg-gradient-to-br from-primary/25 to-primary/10 flex items-center justify-center mb-4">
                     <badge.icon className="h-7 w-7 text-primary" />
                   </div>
                   <span className="font-display text-sm tracking-wide text-foreground">{t(badge.key)}</span>
@@ -57,7 +57,7 @@ const About = () => {
             transition={{ duration: 0.6 }}
             className="relative"
           >
-            <div className="aspect-square bg-gradient-to-br from-card to-secondary rounded-3xl p-8 relative overflow-hidden shadow-elevated border border-border">
+            <div className="aspect-square premium-surface rounded-3xl p-8 relative overflow-hidden shadow-elevated">
               {/* Decorative Elements */}
               <div className="absolute top-0 right-0 w-40 h-40 bg-primary/10 rounded-full -translate-y-1/2 translate-x-1/2 blur-2xl" />
               <div className="absolute bottom-0 left-0 w-56 h-56 bg-primary/5 rounded-full translate-y-1/4 -translate-x-1/4 blur-2xl" />

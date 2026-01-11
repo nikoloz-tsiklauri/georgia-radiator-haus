@@ -21,7 +21,7 @@ const Header = () => {
   ];
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 glass-effect">
+    <header className="fixed top-0 left-0 right-0 z-50 glass-header">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
@@ -47,7 +47,7 @@ const Header = () => {
           {/* Right Side */}
           <div className="flex items-center gap-4">
             {/* Language Switcher */}
-            <div className="hidden sm:flex items-center gap-1 bg-secondary rounded-full p-1 shadow-soft">
+            <div className="hidden sm:flex items-center gap-1 bg-muted rounded-full p-1 shadow-soft border border-border">
               {languages.map((lang) => (
                 <button
                   key={lang.code}
@@ -65,7 +65,7 @@ const Header = () => {
 
             {/* Phone CTA */}
             <a href="tel:+995555123456" className="hidden lg:flex items-center gap-2 text-primary hover:text-primary/80 transition-colors">
-              <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center">
+              <div className="w-8 h-8 rounded-full bg-primary/15 flex items-center justify-center">
                 <Phone className="h-4 w-4" />
               </div>
               <span className="font-display text-sm">+995 555 123 456</span>
@@ -74,7 +74,7 @@ const Header = () => {
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="md:hidden p-2 text-foreground hover:bg-secondary rounded-lg transition-colors"
+              className="md:hidden p-2 text-foreground hover:bg-muted rounded-lg transition-colors"
             >
               {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
@@ -89,7 +89,7 @@ const Header = () => {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-card border-t border-border overflow-hidden shadow-elevated"
+            className="md:hidden premium-surface border-t border-border overflow-hidden shadow-elevated"
           >
             <nav className="container mx-auto px-4 py-6 flex flex-col gap-4">
               {navItems.map((item) => (
@@ -112,7 +112,7 @@ const Header = () => {
                     className={`px-4 py-2 text-sm font-display tracking-wide rounded-full transition-all ${
                       language === lang.code
                         ? 'bg-primary text-primary-foreground'
-                        : 'bg-secondary text-muted-foreground'
+                        : 'bg-muted text-muted-foreground'
                     }`}
                   >
                     {lang.label}
@@ -122,7 +122,7 @@ const Header = () => {
 
               {/* Mobile Phone */}
               <a href="tel:+995555123456" className="flex items-center gap-3 text-primary pt-2">
-                <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
+                <div className="w-10 h-10 rounded-full bg-primary/15 flex items-center justify-center">
                   <Phone className="h-5 w-5" />
                 </div>
                 <span className="font-display text-lg">+995 555 123 456</span>
