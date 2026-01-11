@@ -8,67 +8,67 @@
 
 @layer base {
   :root {
-    /* Light modern theme */
-    --background: 0 0% 98%;
-    --foreground: 0 0% 10%;
+    /* Premium Automotive Light Theme - Soft Neutral Grays */
+    --background: 220 10% 94%;
+    --foreground: 220 15% 18%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 0 0% 10%;
+    --card: 220 8% 96%;
+    --card-foreground: 220 15% 15%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 10%;
+    --popover: 220 8% 96%;
+    --popover-foreground: 220 15% 15%;
 
     /* Racing Red - Primary accent */
-    --primary: 0 84% 50%;
+    --primary: 0 84% 48%;
     --primary-foreground: 0 0% 100%;
 
-    /* Light gray secondary */
-    --secondary: 0 0% 95%;
-    --secondary-foreground: 0 0% 20%;
+    /* Warm gray secondary */
+    --secondary: 220 8% 88%;
+    --secondary-foreground: 220 15% 20%;
 
-    --muted: 0 0% 92%;
-    --muted-foreground: 0 0% 45%;
+    --muted: 220 8% 85%;
+    --muted-foreground: 220 10% 40%;
 
-    --accent: 0 0% 94%;
-    --accent-foreground: 0 0% 10%;
+    --accent: 220 8% 90%;
+    --accent-foreground: 220 15% 15%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 0 0% 88%;
-    --input: 0 0% 90%;
-    --ring: 0 84% 50%;
+    --border: 220 10% 82%;
+    --input: 220 8% 88%;
+    --ring: 0 84% 48%;
 
     --radius: 0.75rem;
 
-    /* Custom tokens */
-    --racing-red: 0 84% 50%;
-    --racing-red-glow: 0 90% 55%;
-    --carbon: 0 0% 15%;
-    --aluminum: 0 0% 75%;
-    --chrome: 0 0% 85%;
-    --surface-elevated: 0 0% 100%;
+    /* Custom tokens - Premium Automotive */
+    --racing-red: 0 84% 48%;
+    --racing-red-glow: 0 90% 52%;
+    --carbon: 220 15% 12%;
+    --aluminum: 220 8% 70%;
+    --chrome: 220 8% 80%;
+    --surface-elevated: 220 8% 97%;
 
-    /* Gradients */
-    --gradient-racing: linear-gradient(135deg, hsl(0 84% 50%) 0%, hsl(0 70% 45%) 100%);
-    --gradient-hero: linear-gradient(135deg, hsl(0 0% 96%) 0%, hsl(0 0% 92%) 100%);
-    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%) 0%, hsl(0 0% 97%) 100%);
-    --gradient-subtle: linear-gradient(180deg, hsl(0 0% 98%) 0%, hsl(0 0% 95%) 100%);
+    /* Gradients - Warm automotive feel */
+    --gradient-racing: linear-gradient(135deg, hsl(0 84% 48%) 0%, hsl(0 75% 40%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(220 10% 92%) 0%, hsl(220 8% 88%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(220 8% 97%) 0%, hsl(220 8% 93%) 100%);
+    --gradient-subtle: linear-gradient(180deg, hsl(220 10% 94%) 0%, hsl(220 8% 90%) 100%);
 
-    /* Shadows */
-    --shadow-racing: 0 4px 30px -5px hsl(0 84% 50% / 0.25);
-    --shadow-elevated: 0 10px 40px -10px hsl(0 0% 0% / 0.1);
-    --shadow-card: 0 4px 20px -5px hsl(0 0% 0% / 0.08);
-    --shadow-soft: 0 2px 10px -2px hsl(0 0% 0% / 0.05);
+    /* Shadows - Refined automotive depth */
+    --shadow-racing: 0 4px 30px -5px hsl(0 84% 48% / 0.3);
+    --shadow-elevated: 0 10px 40px -10px hsl(220 20% 10% / 0.15);
+    --shadow-card: 0 4px 20px -5px hsl(220 20% 10% / 0.1);
+    --shadow-soft: 0 2px 10px -2px hsl(220 20% 10% / 0.06);
 
-    --sidebar-background: 0 0% 100%;
-    --sidebar-foreground: 0 0% 20%;
-    --sidebar-primary: 0 84% 50%;
+    --sidebar-background: 220 8% 96%;
+    --sidebar-foreground: 220 15% 18%;
+    --sidebar-primary: 0 84% 48%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 0 0% 95%;
-    --sidebar-accent-foreground: 0 0% 10%;
-    --sidebar-border: 0 0% 90%;
-    --sidebar-ring: 0 84% 50%;
+    --sidebar-accent: 220 8% 90%;
+    --sidebar-accent-foreground: 220 15% 15%;
+    --sidebar-border: 220 10% 82%;
+    --sidebar-ring: 0 84% 48%;
   }
 
   .dark {
@@ -165,8 +165,13 @@
   }
 
   .glass-effect {
-    background: hsl(0 0% 100% / 0.8);
+    background: hsl(220 8% 96% / 0.85);
     backdrop-filter: blur(12px);
-    border: 1px solid hsl(0 0% 90%);
+    border: 1px solid hsl(220 10% 80%);
+  }
+
+  .premium-surface {
+    background: linear-gradient(145deg, hsl(220 8% 97%) 0%, hsl(220 8% 94%) 100%);
+    border: 1px solid hsl(220 10% 85%);
   }
 }
