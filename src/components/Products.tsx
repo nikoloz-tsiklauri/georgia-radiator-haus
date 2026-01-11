@@ -30,7 +30,7 @@ const Products = () => {
   ];
 
   return (
-    <section id="products" className="py-20 md:py-32 subtle-gradient">
+    <section id="products" className="py-20 md:py-32 section-gradient">
       <div className="container mx-auto px-4">
         {/* Header */}
         <motion.div
@@ -54,16 +54,16 @@ const Products = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.15, duration: 0.5 }}
-              className="group bg-card border border-border rounded-2xl overflow-hidden hover:border-primary/30 hover:shadow-elevated transition-all duration-300"
+              className="group floating-card rounded-2xl overflow-hidden hover:border-primary/40 hover:shadow-elevated transition-all duration-300"
             >
               {/* Image */}
-              <div className="relative aspect-square overflow-hidden bg-secondary">
+              <div className="relative aspect-square overflow-hidden bg-muted">
                 <img
                   src={product.image}
                   alt={product.name}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-card via-transparent to-transparent opacity-40" />
+                <div className="absolute inset-0 bg-gradient-to-t from-racing-carbon/60 via-transparent to-transparent opacity-60" />
                 
                 {/* Performance Badge */}
                 <div className="absolute top-4 right-4 bg-primary text-primary-foreground px-4 py-1.5 rounded-full flex items-center gap-1.5 shadow-racing">

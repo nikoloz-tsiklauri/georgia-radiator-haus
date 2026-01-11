@@ -22,7 +22,7 @@ const Features = () => {
   ];
 
   return (
-    <section className="py-20 md:py-32 bg-card">
+    <section className="py-20 md:py-32 bg-background">
       <div className="container mx-auto px-4">
         {/* Header */}
         <motion.div
@@ -46,14 +46,14 @@ const Features = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1, duration: 0.5 }}
-              className="group relative p-8 bg-background border border-border rounded-2xl hover:border-primary/30 hover:shadow-elevated transition-all duration-300"
+              className="group relative p-8 floating-card rounded-2xl hover:border-primary/40 hover:shadow-elevated transition-all duration-300"
             >
               {/* Hover Gradient */}
-              <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-primary/8 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               
               <div className="relative">
                 {/* Icon */}
-                <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-primary/15 to-primary/5 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-primary/20 to-primary/8 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                   <feature.icon className="h-7 w-7 text-primary" />
                 </div>
 

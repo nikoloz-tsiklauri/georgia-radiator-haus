@@ -5,7 +5,7 @@ const Footer = () => {
   const { t } = useLanguage();
 
   return (
-    <footer className="bg-background border-t border-border">
+    <footer className="section-gradient border-t border-border">
       <div className="container mx-auto px-4 py-12">
         <div className="grid md:grid-cols-3 gap-8">
           {/* Brand */}
@@ -43,7 +43,7 @@ const Footer = () => {
             </h4>
             <div className="space-y-3">
               <a href="tel:+995555123456" className="flex items-center gap-3 text-sm text-foreground hover:text-primary transition-colors">
-                <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center">
+                <div className="w-8 h-8 rounded-lg bg-primary/15 flex items-center justify-center">
                   <Phone className="h-4 w-4 text-primary" />
                 </div>
                 +995 555 123 456
@@ -54,13 +54,13 @@ const Footer = () => {
                 rel="noopener noreferrer"
                 className="flex items-center gap-3 text-sm text-foreground hover:text-primary transition-colors"
               >
-                <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center">
+                <div className="w-8 h-8 rounded-lg bg-primary/15 flex items-center justify-center">
                   <MapPin className="h-4 w-4 text-primary" />
                 </div>
                 ქუთაისის ქუჩა 30ა, თბილისი
               </a>
               <div className="flex items-center gap-3 text-sm text-muted-foreground">
-                <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center">
+                <div className="w-8 h-8 rounded-lg bg-primary/15 flex items-center justify-center">
                   <span className="text-primary text-xs">⏰</span>
                 </div>
                 {t('footer.hours')}
@@ -75,10 +75,10 @@ const Footer = () => {
             © 2024 RACING GEORGIA. {t('footer.rights')}.
           </p>
           <div className="flex items-center gap-4">
-            <span className="text-xs text-foreground bg-secondary border border-border px-4 py-2 rounded-full shadow-soft">
+            <span className="text-xs text-foreground bg-accent border border-border px-4 py-2 rounded-full shadow-soft">
               🇩🇪 გერმანული ხარისხი
             </span>
-            <span className="text-xs text-foreground bg-secondary border border-border px-4 py-2 rounded-full shadow-soft">
+            <span className="text-xs text-foreground bg-accent border border-border px-4 py-2 rounded-full shadow-soft">
               🇬🇪 საქართველოსთვის
             </span>
           </div>

@@ -8,21 +8,22 @@ const Hero = () => {
   const { t } = useLanguage();
 
   return (
-    <section id="hero" className="relative min-h-screen flex items-center pt-20 hero-gradient">
-      {/* Background Image with Light Overlay */}
+    <section id="hero" className="relative min-h-screen flex items-center pt-20">
+      {/* Background Image - Clearly Visible */}
       <div className="absolute inset-0 z-0">
         <img
           src={heroImage}
           alt="Racing Radiator"
-          className="w-full h-full object-cover opacity-20"
+          className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/90 to-background/70" />
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-background" />
+        {/* Dark overlay for text readability - not too heavy */}
+        <div className="absolute inset-0 bg-gradient-to-r from-racing-carbon/80 via-racing-carbon/60 to-racing-carbon/40" />
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-background/90" />
       </div>
 
-      {/* Decorative Elements */}
-      <div className="absolute top-40 right-20 w-72 h-72 bg-primary/5 rounded-full blur-3xl" />
-      <div className="absolute bottom-40 left-20 w-96 h-96 bg-primary/10 rounded-full blur-3xl" />
+      {/* Subtle red accent glow */}
+      <div className="absolute top-40 right-20 w-72 h-72 bg-primary/10 rounded-full blur-3xl" />
+      <div className="absolute bottom-40 left-20 w-96 h-96 bg-primary/15 rounded-full blur-3xl" />
 
       {/* Content */}
       <div className="container mx-auto px-4 relative z-10">
@@ -33,18 +34,18 @@ const Hero = () => {
             transition={{ duration: 0.8 }}
           >
             {/* Badge */}
-            <div className="inline-flex items-center gap-2 bg-card border border-border rounded-full px-5 py-2.5 mb-6 shadow-soft">
+            <div className="inline-flex items-center gap-2 glass-card rounded-full px-5 py-2.5 mb-6 shadow-soft">
               <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-              <span className="text-sm text-foreground font-medium">German Engineering</span>
+              <span className="text-sm text-white/90 font-medium">German Engineering</span>
             </div>
 
-            {/* Title */}
-            <h1 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6 text-foreground">
+            {/* Title - White on dark hero */}
+            <h1 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6 text-white">
               {t('hero.title')}
             </h1>
 
             {/* Subtitle */}
-            <p className="text-lg md:text-xl text-muted-foreground max-w-xl mb-8 font-body leading-relaxed">
+            <p className="text-lg md:text-xl text-white/80 max-w-xl mb-8 font-body leading-relaxed">
               {t('hero.subtitle')}
             </p>
 
@@ -64,7 +65,7 @@ const Hero = () => {
               <Button
                 size="lg"
                 variant="outline"
-                className="border-2 border-border hover:border-primary hover:bg-primary/5 hover:text-primary font-display text-lg tracking-wide h-14 px-8 transition-all duration-200"
+                className="border-2 border-white/30 bg-white/10 backdrop-blur-sm text-white hover:border-white hover:bg-white/20 font-display text-lg tracking-wide h-14 px-8 transition-all duration-200"
                 asChild
               >
                 <a href="tel:+995555123456">
@@ -77,7 +78,7 @@ const Hero = () => {
             {/* Phone Display */}
             <div className="mt-12 flex items-center gap-4">
               <div className="w-16 h-px bg-gradient-to-r from-primary to-transparent" />
-              <a href="tel:+995555123456" className="text-2xl font-display text-foreground hover:text-primary transition-colors">
+              <a href="tel:+995555123456" className="text-2xl font-display text-white hover:text-primary transition-colors">
                 +995 555 123 456
               </a>
             </div>
@@ -92,11 +93,11 @@ const Hero = () => {
         transition={{ delay: 1.5, duration: 0.5 }}
         className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
       >
-        <span className="text-xs text-muted-foreground uppercase tracking-widest">Scroll</span>
+        <span className="text-xs text-white/60 uppercase tracking-widest">Scroll</span>
         <motion.div
           animate={{ y: [0, 10, 0] }}
           transition={{ repeat: Infinity, duration: 1.5 }}
-          className="w-6 h-10 border-2 border-muted-foreground/30 rounded-full flex justify-center pt-2"
+          className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center pt-2"
         >
           <div className="w-1.5 h-3 bg-primary rounded-full" />
         </motion.div>
