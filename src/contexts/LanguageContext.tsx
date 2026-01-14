@@ -15,29 +15,18 @@ export const translations: Translations = {
   'nav.home': { ge: 'მთავარი', en: 'Home', de: 'Startseite' },
   'nav.about': { ge: 'ჩვენს შესახებ', en: 'About', de: 'Über uns' },
   'nav.products': { ge: 'პროდუქცია', en: 'Products', de: 'Produkte' },
+  'nav.shop': { ge: 'მაღაზია', en: 'Shop', de: 'Shop' },
   'nav.contact': { ge: 'კონტაქტი', en: 'Contact', de: 'Kontakt' },
   
   // Hero
-  'hero.title': { 
-    ge: 'გერმანული რბოლის რადიატორები', 
-    en: 'German Racing Radiators', 
-    de: 'Deutsche Rennsport-Kühler' 
-  },
-  'hero.subtitle': { 
-    ge: 'მაღალი ხარისხის გაგრილების სისტემები თქვენი ავტომობილისთვის. გერმანული ინჟინერია, საქართველოში.', 
-    en: 'High-performance cooling systems for your vehicle. German engineering, in Georgia.', 
-    de: 'Hochleistungs-Kühlsysteme für Ihr Fahrzeug. Deutsche Technik, in Georgien.' 
-  },
-  'hero.cta': { ge: 'უფასო კონსულტაცია', en: 'Free Consultation', de: 'Kostenlose Beratung' },
+  'hero.title': { ge: 'გერმანული რბოლის რადიატორები', en: 'German Racing Radiators', de: 'Deutsche Rennsport-Kühler' },
+  'hero.subtitle': { ge: 'მაღალი ხარისხის გაგრილების სისტემები თქვენი ავტომობილისთვის. გერმანული ინჟინერია, საქართველოში.', en: 'High-performance cooling systems for your vehicle. German engineering, in Georgia.', de: 'Hochleistungs-Kühlsysteme für Ihr Fahrzeug. Deutsche Technik, in Georgien.' },
+  'hero.cta': { ge: 'მაღაზია', en: 'Shop Now', de: 'Jetzt kaufen' },
   'hero.call': { ge: 'დაგვირეკეთ', en: 'Call Us', de: 'Rufen Sie uns an' },
   
   // About
   'about.title': { ge: 'RACING ბრენდის შესახებ', en: 'About RACING Brand', de: 'Über die Marke RACING' },
-  'about.description': { 
-    ge: 'RACING არის გერმანული პრემიუმ ბრენდი, რომელიც სპეციალიზირებულია მაღალი ხარისხის რადიატორების წარმოებაში. ჩვენ ვართ ოფიციალური დისტრიბუტორი საქართველოში და გთავაზობთ ორიგინალ გერმანულ პროდუქციას პირდაპირი იმპორტით.', 
-    en: 'RACING is a German premium brand specializing in high-quality radiator manufacturing. We are the official distributor in Georgia, offering original German products through direct import.', 
-    de: 'RACING ist eine deutsche Premium-Marke, die sich auf die Herstellung hochwertiger Kühler spezialisiert hat. Wir sind der offizielle Vertriebspartner in Georgien und bieten originale deutsche Produkte durch Direktimport an.' 
-  },
+  'about.description': { ge: 'RACING არის გერმანული პრემიუმ ბრენდი, რომელიც სპეციალიზირებულია მაღალი ხარისხის რადიატორების წარმოებაში. ჩვენ ვართ ოფიციალური დისტრიბუტორი საქართველოში და გთავაზობთ ორიგინალ გერმანულ პროდუქციას პირდაპირი იმპორტით.', en: 'RACING is a German premium brand specializing in high-quality radiator manufacturing. We are the official distributor in Georgia, offering original German products through direct import.', de: 'RACING ist eine deutsche Premium-Marke, die sich auf die Herstellung hochwertiger Kühler spezialisiert hat. Wir sind der offizielle Vertriebspartner in Georgien und bieten originale deutsche Produkte durch Direktimport an.' },
   'about.badge1': { ge: 'გერმანული ხარისხი', en: 'German Quality', de: 'Deutsche Qualität' },
   'about.badge2': { ge: 'ოფიციალური დისტრიბუტორი', en: 'Official Distributor', de: 'Offizieller Vertrieb' },
   'about.badge3': { ge: 'გარანტია', en: 'Warranty', de: 'Garantie' },
@@ -61,6 +50,38 @@ export const translations: Translations = {
   'products.title': { ge: 'ჩვენი პროდუქცია', en: 'Our Products', de: 'Unsere Produkte' },
   'products.compatible': { ge: 'თავსებადი', en: 'Compatible with', de: 'Kompatibel mit' },
   'products.performance': { ge: 'მაღალი წარმადობა', en: 'High Performance', de: 'Hochleistung' },
+  
+  // Shop
+  'shop.title': { ge: 'მაღაზია', en: 'Shop', de: 'Shop' },
+  'shop.subtitle': { ge: 'აირჩიეთ თქვენი ავტომობილისთვის იდეალური რადიატორი', en: 'Choose the perfect radiator for your vehicle', de: 'Wählen Sie den perfekten Kühler für Ihr Fahrzeug' },
+  'shop.search': { ge: 'მოძებნეთ პროდუქტი...', en: 'Search products...', de: 'Produkte suchen...' },
+  'shop.addToCart': { ge: 'კალათაში', en: 'Add to Cart', de: 'In den Warenkorb' },
+  'shop.cart': { ge: 'კალათა', en: 'Cart', de: 'Warenkorb' },
+  'shop.emptyCart': { ge: 'კალათა ცარიელია', en: 'Your cart is empty', de: 'Ihr Warenkorb ist leer' },
+  'shop.total': { ge: 'ჯამი', en: 'Total', de: 'Gesamt' },
+  'shop.checkout': { ge: 'შეკვეთის გაფორმება', en: 'Checkout', de: 'Zur Kasse' },
+  'shop.noProducts': { ge: 'პროდუქტი ვერ მოიძებნა', en: 'No products found', de: 'Keine Produkte gefunden' },
+  
+  // Checkout
+  'checkout.title': { ge: 'შეკვეთის გაფორმება', en: 'Checkout', de: 'Kasse' },
+  'checkout.fullName': { ge: 'სრული სახელი', en: 'Full Name', de: 'Vollständiger Name' },
+  'checkout.fullNamePlaceholder': { ge: 'გიორგი გიორგაძე', en: 'John Doe', de: 'Max Mustermann' },
+  'checkout.phone': { ge: 'ტელეფონი', en: 'Phone', de: 'Telefon' },
+  'checkout.address': { ge: 'მისამართი', en: 'Delivery Address', de: 'Lieferadresse' },
+  'checkout.addressPlaceholder': { ge: 'ქალაქი, ქუჩა, შენობის ნომერი...', en: 'City, Street, Building number...', de: 'Stadt, Straße, Hausnummer...' },
+  'checkout.notes': { ge: 'დამატებითი შენიშვნები', en: 'Additional Notes', de: 'Zusätzliche Hinweise' },
+  'checkout.notesPlaceholder': { ge: 'სპეციალური ინსტრუქციები...', en: 'Special instructions...', de: 'Besondere Anweisungen...' },
+  'checkout.orderSummary': { ge: 'შეკვეთის დეტალები', en: 'Order Summary', de: 'Bestellübersicht' },
+  'checkout.quantity': { ge: 'რაოდენობა', en: 'Qty', de: 'Menge' },
+  'checkout.placeOrder': { ge: 'შეკვეთის გაგზავნა', en: 'Place Order', de: 'Bestellung aufgeben' },
+  'checkout.processing': { ge: 'მუშავდება...', en: 'Processing...', de: 'Verarbeitung...' },
+  'checkout.success': { ge: 'შეკვეთა მიღებულია!', en: 'Order Received!', de: 'Bestellung eingegangen!' },
+  'checkout.successMessage': { ge: 'მალე დაგიკავშირდებით.', en: 'We will contact you shortly.', de: 'Wir werden Sie in Kürze kontaktieren.' },
+  'checkout.orderComplete': { ge: 'შეკვეთა წარმატებით გაფორმდა!', en: 'Order Complete!', de: 'Bestellung abgeschlossen!' },
+  'checkout.orderCompleteMessage': { ge: 'თქვენი შეკვეთა მიღებულია. მალე დაგიკავშირდებით დეტალების შესათანხმებლად.', en: 'Your order has been received. We will contact you shortly to confirm details.', de: 'Ihre Bestellung ist eingegangen. Wir werden Sie in Kürze kontaktieren.' },
+  'checkout.continueShopping': { ge: 'შოპინგის გაგრძელება', en: 'Continue Shopping', de: 'Weiter einkaufen' },
+  'checkout.backToShop': { ge: 'მაღაზიაში დაბრუნება', en: 'Back to Shop', de: 'Zurück zum Shop' },
+  'checkout.goToShop': { ge: 'მაღაზიაში გადასვლა', en: 'Go to Shop', de: 'Zum Shop' },
   
   // Contact Form
   'contact.title': { ge: 'მოითხოვეთ კონსულტაცია', en: 'Request Consultation', de: 'Beratung anfordern' },

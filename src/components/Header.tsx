@@ -1,11 +1,15 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, Phone } from 'lucide-react';
+import { Link, useLocation } from 'react-router-dom';
 import { useLanguage } from '@/contexts/LanguageContext';
+import CartButton from '@/components/CartButton';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { language, setLanguage, t } = useLanguage();
+  const location = useLocation();
+  const isHomePage = location.pathname === '/';
 
   const languages = [
     { code: 'ge' as const, label: 'GE' },
@@ -13,12 +17,19 @@ const Header = () => {
     { code: 'de' as const, label: 'DE' },
   ];
 
-  const navItems = [
-    { key: 'nav.home', href: '#hero' },
-    { key: 'nav.about', href: '#about' },
-    { key: 'nav.products', href: '#products' },
-    { key: 'nav.contact', href: '#contact' },
-  ];
+  const navItems = isHomePage
+    ? [
+        { key: 'nav.home', href: '#hero', isAnchor: true },
+        { key: 'nav.about', href: '#about', isAnchor: true },
+        { key: 'nav.products', href: '#products', isAnchor: true },
+        { key: 'nav.shop', href: '/shop', isAnchor: false },
+        { key: 'nav.contact', href: '#contact', isAnchor: true },
+      ]
+    : [
+        { key: 'nav.home', href: '/', isAnchor: false },
+        { key: 'nav.shop', href: '/shop', isAnchor: false },
+        { key: 'nav.contact', href: '/#contact', isAnchor: false },
+      ];
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 glass-header">
@@ -33,15 +44,25 @@ const Header = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-8">
-            {navItems.map((item) => (
-              <a
-                key={item.key}
-                href={item.href}
-                className="font-display text-sm tracking-wide text-muted-foreground hover:text-primary transition-colors duration-200"
-              >
-                {t(item.key)}
-              </a>
-            ))}
+            {navItems.map((item) =>
+              item.isAnchor ? (
+                <a
+                  key={item.key}
+                  href={item.href}
+                  className="font-display text-sm tracking-wide text-muted-foreground hover:text-primary transition-colors duration-200"
+                >
+                  {t(item.key)}
+                </a>
+              ) : (
+                <Link
+                  key={item.key}
+                  to={item.href}
+                  className="font-display text-sm tracking-wide text-muted-foreground hover:text-primary transition-colors duration-200"
+                >
+                  {t(item.key)}
+                </Link>
+              )
+            )}
           </nav>
 
           {/* Right Side */}
@@ -62,6 +83,9 @@ const Header = () => {
                 </button>
               ))}
             </div>
+
+            {/* Cart Button */}
+            <CartButton />
 
             {/* Phone CTA */}
             <a href="tel:+995555123456" className="hidden lg:flex items-center gap-2 text-primary hover:text-primary/80 transition-colors">
@@ -92,16 +116,27 @@ const Header = () => {
             className="md:hidden premium-surface border-t border-border overflow-hidden shadow-elevated"
           >
             <nav className="container mx-auto px-4 py-6 flex flex-col gap-4">
-              {navItems.map((item) => (
-                <a
-                  key={item.key}
-                  href={item.href}
-                  onClick={() => setIsMenuOpen(false)}
-                  className="font-display text-lg tracking-wide text-foreground hover:text-primary transition-colors py-2"
-                >
-                  {t(item.key)}
-                </a>
-              ))}
+              {navItems.map((item) =>
+                item.isAnchor ? (
+                  <a
+                    key={item.key}
+                    href={item.href}
+                    onClick={() => setIsMenuOpen(false)}
+                    className="font-display text-lg tracking-wide text-foreground hover:text-primary transition-colors py-2"
+                  >
+                    {t(item.key)}
+                  </a>
+                ) : (
+                  <Link
+                    key={item.key}
+                    to={item.href}
+                    onClick={() => setIsMenuOpen(false)}
+                    className="font-display text-lg tracking-wide text-foreground hover:text-primary transition-colors py-2"
+                  >
+                    {t(item.key)}
+                  </Link>
+                )
+              )}
               
               {/* Mobile Language Switcher */}
               <div className="flex items-center gap-2 pt-4 border-t border-border">
