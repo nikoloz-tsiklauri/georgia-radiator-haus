@@ -13,7 +13,7 @@ import radiator1 from '@/assets/radiator-1.jpg';
 import radiator2 from '@/assets/radiator-2.jpg';
 import radiator3 from '@/assets/radiator-3.jpg';
 import cap1 from '@/assets/cap-1.jpg';
-import plasticParts from '@/assets/plastic-parts-real.png';
+import radiatorTankCover from '@/assets/radiator-tank-cover.jpg';
 import cap3 from '@/assets/cap-3.jpg';
 
 const Products = () => {
@@ -44,9 +44,9 @@ const Products = () => {
       description: 'Premium metal radiator cap with high-pressure seal',
     },
     {
-      image: plasticParts,
-      name: 'Plastic Radiator Parts Set',
-      description: 'Premium OEM-quality end-tank housing with connectors and clips',
+      image: radiatorTankCover,
+      name: 'RADIATOR PLASTIC TANK COVER',
+      description: 'OEM radiator plastic tank cover for Hyundai/Kia models',
     },
     {
       image: cap3,
