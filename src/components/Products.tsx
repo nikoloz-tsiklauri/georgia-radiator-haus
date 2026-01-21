@@ -13,7 +13,7 @@ import radiator1 from '@/assets/radiator-1.jpg';
 import radiator2 from '@/assets/radiator-2.jpg';
 import radiator3 from '@/assets/radiator-3.jpg';
 import cap1 from '@/assets/cap-1.jpg';
-import plasticParts from '@/assets/plastic-parts.jpg';
+import plasticPartsPremium from '@/assets/plastic-parts-premium.jpg';
 import cap3 from '@/assets/cap-3.jpg';
 
 const Products = () => {
@@ -44,7 +44,7 @@ const Products = () => {
       description: 'Premium metal radiator cap with high-pressure seal',
     },
     {
-      image: plasticParts,
+      image: plasticPartsPremium,
       name: 'RADIATOR PLASTIC PARTS',
       description: 'OEM radiator plastic housings / tank covers for multiple models',
     },
