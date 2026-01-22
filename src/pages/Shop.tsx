@@ -28,9 +28,14 @@ const Shop = () => {
   const { language } = useLanguage();
 
   const filteredProducts = products.filter((product) => {
+    const query = searchQuery.toLowerCase();
+    const name = language === 'ge' ? product.nameGe : product.name;
+    const description = language === 'ge' ? product.descriptionGe : product.description;
+    
     const matchesSearch =
-      product.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      product.compatible.toLowerCase().includes(searchQuery.toLowerCase());
+      name.toLowerCase().includes(query) ||
+      description.toLowerCase().includes(query) ||
+      product.compatible.toLowerCase().includes(query);
     const matchesCategory =
       selectedCategory === 'all' || product.category === selectedCategory;
     return matchesSearch && matchesCategory;
