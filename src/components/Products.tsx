@@ -25,33 +25,33 @@ const Products = () => {
   const products = [
     {
       image: radiator1,
-      name: 'RACING Pro Series',
-      description: 'High-performance aluminum radiator for demanding applications',
+      nameKey: 'homeProducts.pro.name',
+      descKey: 'homeProducts.pro.desc',
     },
     {
       image: radiator2,
-      name: 'RACING Sport Series',
-      description: 'Competition-grade cooling for track and street use',
+      nameKey: 'homeProducts.sport.name',
+      descKey: 'homeProducts.sport.desc',
     },
     {
       image: radiator3,
-      name: 'RACING Elite Series',
-      description: 'Premium dual-pass design for maximum heat dissipation',
+      nameKey: 'homeProducts.elite.name',
+      descKey: 'homeProducts.elite.desc',
     },
     {
       image: cap1,
-      name: 'RACING Pro Cap',
-      description: 'Premium metal radiator cap with high-pressure seal',
+      nameKey: 'homeProducts.cap1.name',
+      descKey: 'homeProducts.cap1.desc',
     },
     {
       image: coolantPlastics,
-      name: 'RADIATOR PLASTIC PARTS',
-      description: 'OEM radiator plastic housings / tank covers for multiple models',
+      nameKey: 'homeProducts.cap2.name',
+      descKey: 'homeProducts.cap2.desc',
     },
     {
       image: cap3,
-      name: 'Expansion Tank Cap',
-      description: 'High-quality pressure release expansion tank cap',
+      nameKey: 'homeProducts.cap3.name',
+      descKey: 'homeProducts.cap3.desc',
     },
   ];
 
@@ -103,7 +103,7 @@ const Products = () => {
             <CarouselContent className="-ml-4">
               {products.map((product, index) => (
                 <CarouselItem
-                  key={product.name}
+                  key={product.nameKey}
                   className="pl-4 basis-full sm:basis-1/2 lg:basis-1/3"
                 >
                   <motion.div
@@ -118,7 +118,7 @@ const Products = () => {
                       <div className="relative aspect-square overflow-hidden bg-muted">
                         <img
                           src={product.image}
-                          alt={product.name}
+                          alt={t(product.nameKey)}
                           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-racing-carbon/60 via-transparent to-transparent opacity-60" />
@@ -132,8 +132,8 @@ const Products = () => {
 
                       {/* Content */}
                       <div className="p-6 flex-1 flex flex-col">
-                        <h3 className="font-display text-xl font-bold mb-2 text-foreground">{product.name}</h3>
-                        <p className="text-muted-foreground text-sm">{product.description}</p>
+                        <h3 className="font-display text-xl font-bold mb-2 text-foreground">{t(product.nameKey)}</h3>
+                        <p className="text-muted-foreground text-sm">{t(product.descKey)}</p>
                       </div>
                     </div>
                   </motion.div>
