@@ -97,6 +97,20 @@ export const translations: Translations = {
   'footer.address': { ge: 'თბილისი, საქართველო', en: 'Tbilisi, Georgia', de: 'Tiflis, Georgien' },
   'footer.hours': { ge: 'ორშ-შაბ: 10:00 - 19:00', en: 'Mon-Sat: 10:00 AM - 7:00 PM', de: 'Mo-Sa: 10:00 - 19:00' },
   'footer.rights': { ge: 'ყველა უფლება დაცულია', en: 'All rights reserved', de: 'Alle Rechte vorbehalten' },
+  
+  // Home Products Carousel
+  'homeProducts.pro.name': { ge: 'RACING Pro Series', en: 'RACING Pro Series', de: 'RACING Pro Series' },
+  'homeProducts.pro.desc': { ge: 'მაღალი წარმადობის ალუმინის რადიატორი რთული პირობებისთვის', en: 'High-performance aluminum radiator for demanding applications', de: 'Hochleistungs-Aluminiumkühler für anspruchsvolle Anwendungen' },
+  'homeProducts.sport.name': { ge: 'RACING Sport Series', en: 'RACING Sport Series', de: 'RACING Sport Series' },
+  'homeProducts.sport.desc': { ge: 'სარბოლო გაგრილება ტრეკისა და ყოველდღიური გამოყენებისთვის', en: 'Competition-grade cooling for track and street use', de: 'Wettkampfkühlung für Rennstrecke und Straße' },
+  'homeProducts.elite.name': { ge: 'RACING Elite Series', en: 'RACING Elite Series', de: 'RACING Elite Series' },
+  'homeProducts.elite.desc': { ge: 'პრემიუმ ორმაგი გამავლობის დიზაინი მაქსიმალური გაგრილებისთვის', en: 'Premium dual-pass design for maximum heat dissipation', de: 'Premium-Doppeldurchgang-Design für maximale Wärmeableitung' },
+  'homeProducts.cap1.name': { ge: 'RACING Pro Cap', en: 'RACING Pro Cap', de: 'RACING Pro Cap' },
+  'homeProducts.cap1.desc': { ge: 'პრემიუმ მეტალის რადიატორის ხუფი მაღალი წნევის დალუქვით', en: 'Premium metal radiator cap with high-pressure seal', de: 'Premium-Metallkühlerdeckel mit Hochdruckdichtung' },
+  'homeProducts.cap2.name': { ge: 'რადიატორის პლასტმასის ნაწილები', en: 'RADIATOR PLASTIC PARTS', de: 'KÜHLKUNSTSTOFFTEILE' },
+  'homeProducts.cap2.desc': { ge: 'ზუსტი პლასტმასის კავშირის დეტალი გაგრილების სისტემისთვის', en: 'OEM radiator plastic housings / tank covers for multiple models', de: 'OEM-Kühlerkunststoffgehäuse / Tankabdeckungen für verschiedene Modelle' },
+  'homeProducts.cap3.name': { ge: 'გაფართოების ავზის ხუფი', en: 'Expansion Tank Cap', de: 'Ausgleichsbehälterdeckel' },
+  'homeProducts.cap3.desc': { ge: 'ხარისხიანი წნევის გამანთავისუფლებელი გაფართოების ავზის ხუფი', en: 'High-quality pressure release expansion tank cap', de: 'Hochwertige Druckentlastungs-Ausgleichsbehälterkappe' },
 };
 
 interface LanguageContextType {
